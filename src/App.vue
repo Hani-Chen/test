@@ -1,7 +1,7 @@
 <template>
   <nav>
     <router-link to="/">我被修改了Home</router-link> |
-    <router-link to="/about">我被修改了About</router-link>
+    <router-link to="/about">我被修改1了About</router-link>
   </nav>
   <router-view/>
 </template>
