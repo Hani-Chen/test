@@ -27,10 +27,17 @@ jobs:
         env:
           WELCOME: "ssh scp ssh pipelines"
           LASTSSH: "Doing something after copying"
+          # with:
+          #   host: ${{ USER_HOST }}
+          #   user: ${{ USER_NAME }}
+          #   pass: ${{ USER_PASS }}
+          #   connect_timeout: 10s
+          #   local: "./dist/*"
+          #   remote: /www/wwwroot/test
         with:
-          host: ${{ USER_HOST }}
-          user: ${{ USER_NAME }}
-          pass: ${{ USER_PASS }}
+          host: 8.129.57.128
+          user: root
+          pass: Hani1997
           connect_timeout: 10s
           local: "./dist/*"
           remote: /www/wwwroot/test
