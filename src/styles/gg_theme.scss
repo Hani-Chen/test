@@ -1,0 +1,77 @@
+/*
+ * 小程序及全局变量定义
+ */
+
+// 云存储资源的链接
+$cloud-link: 'https://game.gtimg.cn/images/yxzj/act/a20210915minappguqin/';// layout 页间距
+$container-padding: 40rpx;
+// 色值变量
+$color-brand: #00A4FF;
+$color-secondary-brand: '';
+$color-success: '';
+$color-warning: '';
+$color-danger: '';
+$color-info: '';
+$color-primary-text: #222222;
+$color-sub-text: rgba(34, 34, 34, 0.8);
+$color-secondary-text: rgba(34, 34, 34, 0.6);
+$color-gray-text: rgba(34, 34, 34, 0.5);
+$color-placeholder: rgba(34, 34, 34, 0.3);
+$color-white-text: #ffffff;
+$color-secondary-white-text: rgba(255, 255, 255, 0.6);
+$color-navbar-text: #555555;
+$color-border-base: '';
+$color-border-light: '';
+$color-border-lighter: '';
+$color-primary-bg: #457AFF;
+$color-secondary-bg: #FBFBFB;
+$color-gray-bg: rgba(0, 0, 0, 0.04);
+$color-btn-gray-bg: #F7F8FC;
+$color-navbar: '';
+
+
+
+// $font-size-md: 32rpx;
+$font-size-h1: 36rpx;
+$font-size-h2: 32rpx;
+$font-size-text: 30rpx;
+$font-size-lg: 28rpx;
+$font-size-text-sm: 24rpx;
+$font-size-tips: 22rpx;
+$font-size-label: 20rpx;
+// $font-size-label-sm: 20rpx;
+
+
+
+/**
+ * mixins
+ */
+// 解决ios图片圆角值问题
+@mixin ios-radius() {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+// 解决ios底部小黑条占位空间
+@mixin ios-safe-bottom() {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+@mixin maskBottom() {
+  width: 100%;
+  height: 136rpx;
+  background: linear-gradient(180deg, rgba(158, 131, 95, 0) 0%, #5b4e3d 100%);
+}
+@mixin maskTop() {
+  // width: 100%;
+  // height: 136rpx;
+  background: linear-gradient(
+    0deg,
+    rgba(158, 131, 95, 0) 0%,
+    rgba(#000, 0.3) 100%
+  );
+}
+
+@function changePx($px) {
+  @return $px * 2;
+}

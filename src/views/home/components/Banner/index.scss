@@ -1,0 +1,13 @@
+.banner {
+  &-wrap {
+    position: relative;
+    // @include custom-position(fixed, 0, 0);
+    // @include size(100%, 100vh);
+  }
+  &-item {
+    position: relative;
+    &-img {
+      // @include size(100%, auto);
+    }
+  }
+}

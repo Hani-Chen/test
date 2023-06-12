@@ -1,0 +1,104 @@
+$navColor: #000;
+.module-nav {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 80px;
+  z-index: 2;
+  transition: all 0.5s;
+  &.header-scrolled {
+    background: rgba(25, 28, 31, 0.8);
+    height: 60px;
+  }
+}
+.nav {
+  &-wrap {
+    position: relative;
+  }
+  &-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  &-item {
+    position: relative;
+    display: block;
+    margin: 0 15px;
+    overflow: hidden;
+    height: 30px;
+    line-height: 30px;
+    a {
+      position: relative;
+      height: 30px;
+      color: #fff;
+      padding: 10px 0;
+      transition: 0.3s;
+      font-size: 12px;
+      font-family: "Raleway", sans-serif;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1px;
+      box-sizing: border-box;
+      text-decoration: none;
+
+      &:hover {
+        color: #ffc85a;
+      }
+    }
+    // 高亮
+    .router-link-exact-active {
+      color: #ffc85a;
+    }
+    .nav-item-inner {
+      display: block;
+      text-align: center;
+      transition: all 0.3s ease-in;
+      transform: translate3d(0, 0, 0);
+      &:hover {
+        transform: translate3d(0, -50%, 0);
+      }
+    }
+    .nav-item-name {
+      display: block;
+      height: 100%;
+    }
+    // /* 导航栏效果 - 从左到右 */
+    // &::before {
+    //   content: '';
+    //   position: absolute;
+    //   bottom: 0;
+    //   left: 0;
+    //   right: 0;
+    //   height: 2px;
+    //   background-color: #ffc85a;
+    //   transform-origin: bottom right;
+    //   transform: scaleX(0);
+    //   transition: transform 0.5s ease;
+    // }
+    // &:hover::before {
+    //   transform-origin: bottom left;
+    //   transform: scaleX(1);
+    // }
+
+    /* 导航栏效果 - 中间向两边延申 */
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0%;
+      bottom: 0;
+      width: 102%;
+      transform: scaleX(0);
+      height: 2px;
+      background: #ffc85a;
+      z-index: -1;
+      transition: all 0.3s ease-in;
+    }
+
+    &:hover::before {
+      transform: scaleX(1);
+    }
+  }
+}
