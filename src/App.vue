@@ -4,7 +4,7 @@
 </template>
 <script lang="ts"  name="App">
 import { defineComponent } from "vue";
-// 引入导航栏组件
+// 引入导航栏组件 
 import Nav from "@/components/Nav/index.vue";
 
 export default defineComponent({
